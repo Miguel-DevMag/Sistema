@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="styles.css">
     <title>Accessibility Fitness - Guia de Exercícios</title>
 </head>
-
 <body>
     <main class="container">
-            <header class="header">
                 <nav id="barra-acessibilidade">
-                    <h1>Accessibility Fitness</h1>
-                    <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
-                    <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
-                    <button onclick="modoAltoContraste()" aria-label="Ativar alto contraste">⚡ Contraste</button>
-                    <button onclick="lerTexto()" aria-label="Ouvir texto da página">🔊 Ouvir</button>
-                    <div class="pesquisar">
-                        <input type="text" placeholder="Pesquisa...">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                    <h1 class="titli">Accessibility Fitness</h1>
+                    <button class="acessi" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+                    <button class="acessi" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+                    <button class="acessi" onclick="modoAltoContraste()" aria-label="Ativar alto contraste">⚡ Contraste</button>
+                    <button class="acessi" onclick="lerTexto()" aria-label="Ouvir texto da página">🔊 Ouvir</button>
+                    <input class="pesquisa" type="text" placeholder="Pesquisa...">
+                    <i class="fa-solid fa-magnifying-glass icone"></i>
                 </nav>
-            </header>
-            <div class="men-imagem"></div>
     </main>
+        <div class="men-imagem">
+            <h2>Bem-vindo ao Accessibility Fitness</h2>
+            <p>Academia acessível para pessoas com deficiência visual.</p>
+        </div>
+    
+        <script src="script.js"></script>
 </body>
 
 </html>
