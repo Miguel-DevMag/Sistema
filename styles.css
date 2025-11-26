@@ -1,0 +1,84 @@
+:root {
+    --bg:#090909;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+ background-color: var(--bg);
+}
+
+.container {
+    padding: 2rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #3f3f48;
+    background-color: #090909;
+}
+
+
+.header nav  {
+   display: flex;
+   justify-content: flex-start;
+   gap: 90px;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+}
+
+#barra-acessibilidade h1 {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+#barra-acessibilidade button {
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+#barra-acessibilidade button:hover {
+    background-color: #43437d;
+    color: white;
+}
+
+.pesquisar {
+    position: relative;
+    margin-left: 20px;
+    margin: 5px auto;
+}
+
+.pesquisar input {
+    padding: 8px 1.2rem;
+    border-radius: 5px;
+}
+
+.pesquisar i {
+    position: absolute;
+    left: 90%;
+    top: 10px;
+    transform: translateY(-50%,-50%);
+}
+
+.men-imagem {
+    background-image: url("https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?cs=srgb&dl=pexels-anush-1229356.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 100px auto;
+}
