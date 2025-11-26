@@ -4,108 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Accessibility Fitness - Guia de Exercícios</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #001f3f;
-      color: #fff;
-      padding: 80px 20px 20px 20px; /* espaço para barra fixa */
-      line-height: 1.5;
-      font-size: 16px;
-      cursor: url('../img/ponteiro_superman.png'), auto;
-    }
-
-    /* Barra de acessibilidade */
-    #barra-acessibilidade {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #001f3f;
-      color: #ffcc00;
-      padding: 15px 10px;
-      text-align: center;
-      z-index: 1000;
-      border-bottom: 2px solid #ff3300;
-    }
-
-    #barra-acessibilidade button {
-      background-color: #ffcc00;
-      color: #001f3f;
-      border: none;
-      padding: 8px 12px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    #barra-acessibilidade button:hover {
-      background-color: #ff3300;
-      color: #ffffff;
-    }
-
-    h1, h2 {
-      color: #ffcc00;
-      margin-top: 30px;
-    }
-
-    a {
-      display: inline-block;
-      margin: 5px 10px;
-      color: #ffcc00;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #ff3300;
-    }
-
-    footer img {
-      width: 100%;
-      height: auto;
-      max-height: 300px;
-      object-fit: contain;
-    }
-
-    select {
-      padding: 8px;
-      font-size: 16px;
-      margin-top: 10px;
-      border-radius: 5px;
-      border: none;
-      color: #001f3f;
-    }
-
-    video {
-      border: 2px solid #ffcc00;
-      border-radius: 8px;
-      margin-top: 10px;
-      width: 100%;
-      height: auto;
-    }
-
-    #unmuteButton {
-      padding: 8px 12px;
-      margin-top: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      background-color: #ffcc00;
-      color: #001f3f;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #unmuteButton:hover {
-      background-color: #ff3300;
-      color: #ffffff;
-    }
-  </style>
+   
 </head>
 <body>
-  <!-- Barra de acessibilidade -->
   <div id="barra-acessibilidade">
     <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
     <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
@@ -115,8 +16,8 @@
   </div>
 
   <div class="container">
-    <center><h1>Bem-vindo ao Accessibility Fitness</h1><</center>
-    <center><p>Academia acessível para pessoas com deficiência visual.</p></center>
+    <h1>Bem-vindo ao Accessibility Fitness</h1>
+    <p>Academia acessível para pessoas com deficiência visual.</p>
 
     <figure>
       <img src="IMG/tela_oficial.png" alt="Dois fisiculturistas segurando a Terra com fundo galáctico">
