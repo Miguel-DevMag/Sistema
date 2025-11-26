@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessibility Fitness - Guia de Exercícios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #001f3f;
+      color: #fff;
+      padding: 80px 20px 20px 20px; /* espaço para barra fixa */
+      line-height: 1.5;
+      font-size: 16px;
+      cursor: url('../img/ponteiro_superman.png'), auto;
+    }
+
+    /* Barra de acessibilidade */
+    #barra-acessibilidade {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #001f3f;
+      color: #ffcc00;
+      padding: 15px 10px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #ff3300;
+    }
+
+    #barra-acessibilidade button {
+      background-color: #ffcc00;
+      color: #001f3f;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    #barra-acessibilidade button:hover {
+      background-color: #ff3300;
+      color: #ffffff;
+    }
+
+    h1, h2 {
+      color: #ffcc00;
+      margin-top: 30px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff3300;
+    }
+
+    footer img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      color: #001f3f;
+    }
+
+    video {
+      border: 2px solid #ffcc00;
+      border-radius: 8px;
+      margin-top: 10px;
+      width: 100%;
+      height: auto;
+    }
+
+    #unmuteButton {
+      padding: 8px 12px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: #ffcc00;
+      color: #001f3f;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #unmuteButton:hover {
+      background-color: #ff3300;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de acessibilidade -->
+  <div id="barra-acessibilidade">
+    <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+    <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    <button onclick="modoAltoContraste()" aria-label="Ativar alto contraste">⚡ Contraste</button>
+    <button onclick="lerTexto()" aria-label="Ouvir texto da página">🔊 Ouvir</button>
+    <button onclick="window.speechSynthesis.cancel()" aria-label="Parar de ouvir">⏹️ Parar</button>
+  </div>
+
+  <div class="container">
+    <center><h1>Bem-vindo ao Accessibility Fitness</h1><</center>
+    <center><p>Academia acessível para pessoas com deficiência visual.</p></center>
+
+    <figure>
+      <img src="IMG/tela_oficial.png" alt="Dois fisiculturistas segurando a Terra com fundo galáctico">
+      <figcaption>
+        A cena mostra dois fisiculturistas de corpo inteiro — um homem e uma mulher — posicionados lado a lado, contra um fundo cósmico com a Via Láctea ao fundo. Ambos seguram bengalas brancas com a mão esquerda e sustentam a Terra com a mão direita. O homem usa regata vermelha com símbolo do Superman, shorts pretos e cabelos pretos penteados para trás. A mulher usa regata igual, shorts pretos e cabelos loiros longos. O planeta é metálico, com continentes prateados e oceanos dourados, e uma faixa azul com “ACCESSIBILITY FITNESS”.
+      </figcaption>
+    </figure>
+
+
+    
+<section style="max-width: 900px; margin: 0 auto; text-align: center; padding: 40px 20px; line-height: 1.8; font-size: 18px;">
+  <h2 style="color: #ffcc00; font-size: 32px; margin-bottom: 20px;">Acessibilidade: Nosso Compromisso</h2>
+  <p>
+    O <strong>Accessibility Fitness</strong> nasceu com um propósito claro: transformar o universo do treino em um espaço onde todos possam participar, aprender e evoluir.
+    Desenvolvido especialmente para pessoas com deficiência visual, nosso projeto valoriza a <strong>inclusão digital, a autonomia e o respeito</strong> em cada detalhe.
+    Aqui, cada clique, cada áudio e cada descrição foram pensados para garantir uma experiência <strong>acessível, acolhedora e inspiradora</strong>.
+  </p>
+
+  <p>
+    Nosso site oferece conteúdos ricos e informativos sobre <strong>tipos de treinos, suplementos naturais, artes marciais, danças e anabolizantes</strong>, explicando com clareza o que são, para que servem, seus possíveis benefícios físicos e mentais, riscos à saúde e as adaptações necessárias para diferentes tipos de deficiência.
+  </p>
+
+  <h2 style="color: #ff0000; font-size: 32px; margin: 40px 0 20px;">Quando a Inclusão Enxerga o Invisível</h2>
+  <p>
+    <strong>Acessibilidade não é favor, é direito!</strong> Todos têm o poder de transformar o próprio corpo e a própria história, desde que recebam as condições adequadas para isso.
+    Academias, profissionais e marcas precisam enxergar o potencial de cada pessoa, promovendo oportunidades adaptadas, acompanhamento especializado e ferramentas que realmente façam a diferença.
+  </p>
+
+  <p>
+    No <strong>Accessibility Fitness</strong>, nosso compromisso vai além de quebrar barreiras — queremos <strong>abrir caminhos</strong>, <strong>inspirar mudanças</strong> e <strong>dar voz a quem sempre foi deixado de lado</strong>.
+    Cada conteúdo, cada vídeo e cada treino guiado por áudio representam um passo em direção a um mundo mais justo, acessível e poderoso.
+    Aqui, acreditamos que <strong>a verdadeira força está em nunca desistir</strong>, em acreditar na própria capacidade e em lutar para que todos tenham as mesmas oportunidades.
+  </p>
+
+  <p>
+    Seja você um atleta, um iniciante ou alguém em busca de motivação, o <strong>Accessibility Fitness</strong> está aqui para mostrar que o impossível é apenas uma questão de ponto de vista.
+    Junte-se a nós e descubra como é <strong>enxergar com o coração, ouvir com a mente e treinar com propósito</strong>.
+  </p>
+</section>
+
+
+    <h2>Experiências Inspiradoras</h2>
+    <p>
+      Escolha um vídeo abaixo para ver a descrição e assistir à experiência do praticante:
+    </p>
+
+    <label for="videoSelect">Selecione um vídeo:</label>
+    <select id="videoSelect" onchange="showVideoDescriptionAndVideo()">
+      <option value="">-- Escolha um vídeo --</option>
+      <!-- 20 vídeos genéricos -->
+      <option value="video1">video1</option>
+      <option value="video2">video2</option>
+      <option value="video3">video3</option>
+      <option value="video4">video4</option>
+      <option value="video5">video5</option>
+      <option value="video6">video6</option>
+      <option value="video7">video7</option>
+      <option value="video8">video8</option>
+      <option value="video9">video9</option>
+      <option value="video10">video10</option>
+      <option value="video11">video11</option>
+      <option value="video12">video12</option>
+      <option value="video13">video13</option>
+      <option value="video14">video14</option>
+      <option value="video15">video15</option>
+      <option value="video16">video16</option>
+      <option value="video17">video17</option>
+      <option value="video18">video18</option>
+      <option value="video19">video19</option>
+      <option value="video20">video20</option>
+    </select>
+
+    <div id="videoDescription" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <video id="videoPlayer" controls autoplay muted style="display: none;">
+      <source id="videoSource" src="" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <button id="unmuteButton" style="display:none;" onclick="ativarSom()" aria-label="Ativar som do vídeo">
+      Ativar Som 🔊
+    </button>
+
+    <h2>Navegação</h2>
+    <a href="treino.html">Ir para Treinos</a>
+    <a href="suplementos.html">Ir para Suplementos</a>
+    <a href="lutas.html">Ir para Lutas</a>
+    <a href="danca.html">Ir para Dança</a>
+    <a href="anabolizantes.html">Ir para Anabolizantes</a>
+    <a href="contato.html">Ir para Contato</a>
+
+    <p class="texto-tts">
+      Aqui você encontra guias de exercícios acessíveis, pensados para pessoas com deficiência visual e todos os usuários que desejam treinar com conforto.
+    </p>
+    <p class="texto-tts">
+      Use os botões da barra para aumentar ou diminuir o tamanho da fonte, ativar o contraste e ouvir o conteúdo da página.
+    </p>
+  </div>
+
+  <footer>
+    <img src="IMG/imagem_topo_pagina.png" alt="Imagem ">
+  </footer>
+
+  <script>
+    // Ajuste de fonte
+    function aumentarFonte() {
+      const tamanho = window.getComputedStyle(document.body).fontSize;
+      document.body.style.fontSize = (parseFloat(tamanho) * 1.1) + 'px';
+    }
+    function diminuirFonte() {
+      const tamanho = window.getComputedStyle(document.body).fontSize;
+      document.body.style.fontSize = (parseFloat(tamanho) / 1.1) + 'px';
+    }
+
+    // Modo alto contraste
+    function modoAltoContraste() {
+      const body = document.body;
+      if(body.style.backgroundColor === "black") {
+        body.style.backgroundColor = "#001f3f";
+        body.style.color = "#ffffff";
+      } else {
+        body.style.backgroundColor = "black";
+        body.style.color = "yellow";
+      }
+    }
+
+    // TTS para ler toda a página
+    function lerTexto() {
+      window.speechSynthesis.cancel();
+      const container = document.querySelector('.container');
+      const mensagem = container.innerText;
+      const fala = new SpeechSynthesisUtterance(mensagem);
+      fala.lang = 'pt-BR';
+      window.speechSynthesis.speak(fala);
+    }
+
+    // Vídeos
+    const videos = {};
+    for(let i=1;i<=20;i++){
+      videos['video'+i] = {
+        description: '', // pode preencher descrições se quiser
+        src: 'VIDEOS/video'+i+'.mp4' // caminho dos seus vídeos
+      };
+    }
+
+    function showVideoDescriptionAndVideo(){
+      const select = document.getElementById("videoSelect");
+      const descriptionDiv = document.getElementById("videoDescription");
+      const videoPlayer = document.getElementById("videoPlayer");
+      const videoSource = document.getElementById("videoSource");
+      const unmuteButton = document.getElementById("unmuteButton");
+      const value = select.value;
+
+      if(value && videos[value]){
+        descriptionDiv.textContent = videos[value].description;
+        videoSource.src = videos[value].src;
+        videoPlayer.load();
+        videoPlayer.style.display = "block";
+        videoPlayer.muted = true;
+        videoPlayer.play();
+        unmuteButton.style.display = "inline-block";
+      } else {
+        descriptionDiv.textContent = "";
+        videoPlayer.style.display = "none";
+        unmuteButton.style.display = "none";
+      }
+    }
+
+    function ativarSom(){
+      const videoPlayer = document.getElementById("videoPlayer");
+      videoPlayer.muted = false;
+      videoPlayer.volume = 1;
+      videoPlayer.play();
+    }
+  </script>
+</body>
+</html>
+

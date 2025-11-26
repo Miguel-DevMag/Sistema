@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessFit - Contato</title>
+  <style>
+    /* Estilo geral */
+    body {
+      background-color: #001f3f; /* azul escuro */
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    a {
+      color: #ffcc00; /* amarelo */
+      text-decoration: underline;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: 3px solid #ff4136; /* vermelho forte para foco acessível */
+      outline-offset: 2px;
+    }
+
+    /* Cabeçalho */
+    header img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      color: #ff4136; /* vermelho */
+      margin-bottom: 10px;
+    }
+
+    /* Formulário */
+    form {
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ffcc00; /* amarelo */
+      border-radius: 4px;
+      background-color: #003366;
+      color: #fff;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      border-color: #ff4136;
+      background-color: #004080;
+    }
+    button {
+      background-color: #ff4136; /* vermelho */
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover, button:focus {
+      background-color: #e03228;
+    }
+
+    /* Links contato */
+    .contatos {
+      margin-top: 30px;
+      max-width: 600px;
+    }
+    .contatos a {
+      margin-bottom: 8px;
+      display: block;
+      font-weight: bold;
+    }
+
+    /* Tabela informativa */
+    table {
+      width: 100%;
+      max-width: 700px;
+      border-collapse: collapse;
+      margin-top: 40px;
+      background-color: #003366;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+    }
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ffcc00;
+      text-align: left;
+      color: #fff;
+    }
+    th {
+      background-color: #ff4136;
+      font-weight: bold;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Barra de acessibilidade */
+    #acessibilidade {
+      background-color: #004080;
+      color: #fff;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      z-index: 1000;
+      font-size: 16px;
+    }
+    #acessibilidade button {
+      background: #ffcc00;
+      border: none;
+      color: #003366;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    #acessibilidade button:hover, #acessibilidade button:focus {
+      background-color: #ffb700;
+      outline: none;
+    }
+
+    /* Espaço para barra fixa */
+    body.with-accessibility {
+      padding-top: 60px;
+    }
+
+    /* Mensagem de sucesso */
+    #msg-sucesso {
+      background-color: #007f0e;
+      color: #d4f8d4;
+      padding: 15px;
+      border-radius: 6px;
+      max-width: 600px;
+      margin-top: 15px;
+      display: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="with-accessibility">
+
+  <!-- Barra de acessibilidade -->
+  <nav id="acessibilidade" aria-label="Barra de acessibilidade">
+    <span>Acessibilidade:</span>
+    <button id="aumentarFonte" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button id="diminuirFonte" aria-label="Diminuir tamanho da fonte">A-</button>
+    <button id="contrasteAlto" aria-label="Alternar contraste alto">Contraste</button>
+  </nav>
+
+  <!-- Imagem topo -->
+  <header>
+    <img src="img/imagem_topo_pagina.png" alt="Banner do site Accessibility Fitness" />
+  </header>
+
+  <main>
+    <h1>Fale Conosco</h1>
+
+    <form id="formContato" aria-label="Formulário de contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" aria-required="true" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" aria-required="true" required />
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" aria-required="true" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="msg-sucesso" role="alert" tabindex="0">
+      Obrigado por entrar em contato! Sua mensagem foi enviada com sucesso.
+    </div>
+
+    <section class="contatos" aria-label="Informações de contato">
+      <h2>Outras formas de contato</h2>
+      <a href="mailto:contato@accessibilityfitness.com">E-mail: contato@accessibilityfitness.com</a>
+      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" >WhatsApp: (11) 99999-9999</a>
+      <a href="https://instagram.com/accessibilityfitness" target="_blank" rel="noopener noreferrer" >Instagram: @accessibilityfitness</a>
+      <a href="index.html">Voltar para Início</a>
+    </section>
+
+    <section aria-label="Tabela informativa do aluno">
+      <h2>Informações do Aluno</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Nome do aluno</td><td>Fabiano Rodrigues do Nascimento</td></tr>
+          <tr><td>Altura</td><td>1,80 m</td></tr>
+          <tr><td>Peso</td><td>112 kg</td></tr>
+          <tr><td>Tempo de treino</td><td>2h por dia</td></tr>
+          <tr><td>Calorias gastas</td><td>1650 kcal</td></tr>
+          <tr><td>Medidas corporais</td><td>Peito: 122cm, Cintura: 85cm</td></tr>
+          <tr><td>Plano contratado</td><td>Plano Avançado Mensal</td></tr>
+          <tr><td>Status no Total Pass</td><td>Ativo</td></tr>
+          <tr><td>Status no TotalPass</td><td>Inativo</td></tr>
+          <tr><td>Último treino</td><td>02/07/2025</td></tr>
+          <tr><td>Próximo agendado</td><td>04/07/2025 às 17h</td></tr>
+          <tr><td>Personal Responsável</td><td>Fabio giga </td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    // Script para controlar tamanho da fonte e contraste da página
+
+    const body = document.body;
+    const aumentarFonteBtn = document.getElementById('aumentarFonte');
+    const diminuirFonteBtn = document.getElementById('diminuirFonte');
+    const contrasteBtn = document.getElementById('contrasteAlto');
+
+    let fontSize = 18;
+    let contrasteAlto = false;
+
+    aumentarFonteBtn.addEventListener('click', () => {
+      if (fontSize < 30) {
+        fontSize += 2;
+        body.style.fontSize = fontSize + 'px';
+      }
+    });
+
+    diminuirFonteBtn.addEventListener('click', () => {
+      if (fontSize > 12) {
+        fontSize -= 2;
+        body.style.fontSize = fontSize + 'px';
+      }
+    });
+
+    contrasteBtn.addEventListener('click', () => {
+      contrasteAlto = !contrasteAlto;
+      if (contrasteAlto) {
+        body.style.backgroundColor = '#000';
+        body.style.color = '#ff0';
+        // Ajustar links para contraste
+        document.querySelectorAll('a').forEach(a => {
+          a.style.color = '#0ff';
+        });
+      } else {
+        body.style.backgroundColor = '#001f3f';
+        body.style.color = '#fff';
+        document.querySelectorAll('a').forEach(a => {
+          a.style.color = '#ffcc00';
+        });
+      }
+    });
+
+    // Simulação de envio do formulário
+
+    const form = document.getElementById('formContato');
+    const msgSucesso = document.getElementById('msg-sucesso');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Não enviar para backend
+      // Aqui você poderia validar, enviar por ajax etc
+
+      // Limpar formulário
+      form.reset();
+
+      // Mostrar mensagem sucesso e colocar foco nela para leitor de tela
+      msgSucesso.style.display = 'block';
+      msgSucesso.focus();
+    });
+  </script>
+
+</body>
+</html>

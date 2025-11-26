@@ -1,0 +1,80 @@
+```css
+/* style.css */
+
+/* Geral */
+body {
+  background-color: #0B2545; /* azul escuro */
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  padding: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Cabeçalhos */
+h1 {
+  color: #FFD700; /* amarelo */
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+h2 {
+  color: #FF4500; /* vermelho */
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: #FFA500; /* laranja */
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color: #FFD700; /* amarelo */
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 1em;
+}
+
+/* Imagem */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* sombra amarela leve */
+}
+
+/* Container principal para centralizar e limitar largura */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Para melhorar acessibilidade - foco visível */
+a:focus,
+button:focus {
+  outline: 3px solid #FFD700;
+  outline-offset: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+```
+

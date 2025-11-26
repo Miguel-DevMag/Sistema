@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessibility Fitness - Guia de Exercícios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #001f3f;
+      color: #fff;
+      padding: 80px 20px 20px 20px; /* espaço para barra fixa */
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    /* Barra de acessibilidade */
+    #barra-acessibilidade {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #001f3f;
+      color: #ffcc00;
+      padding: 15px 10px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #ff3300;
+    }
+
+    #barra-acessibilidade button {
+      background-color: #ffcc00;
+      color: #001f3f;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    #barra-acessibilidade button:hover {
+      background-color: #ff3300;
+      color: #ffffff;
+    }
+
+    h1, h2 {
+      color: #ffcc00;
+      margin-top: 30px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff3300;
+    }
+
+    footer img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      color: #001f3f;
+    }
+
+    video {
+      border: 2px solid #ffcc00;
+      border-radius: 8px;
+      margin-top: 10px;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de acessibilidade -->
+  <div id="barra-acessibilidade">
+    <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+    <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    <button onclick="modoAltoContraste()" aria-label="Ativar alto contraste">⚡ Contraste</button>
+    <button onclick="lerTexto()" aria-label="Ouvir texto da página">🔊 Ouvir</button>
+    <button onclick="window.speechSynthesis.cancel()" aria-label="Parar de ouvir">⏹️ Parar</button>
+  </div>
+
+  <div class="container">
+    <h1>Bem-vindo ao Accessibility Fitness</h1>
+    <p>Academia acessível para pessoas com deficiência visual.</p>
+
+    <figure>
+      <img src="IMG/tela_oficial.png" alt="Dois fisiculturistas segurando a Terra com fundo galáctico">
+      <figcaption>
+        A cena mostra dois fisiculturistas de corpo inteiro — um homem e uma mulher — posicionados lado a lado, contra um fundo cósmico com a Via Láctea ao fundo. Ambos seguram bengalas brancas com a mão esquerda e sustentam a Terra com a mão direita. O homem usa regata vermelha com símbolo do Superman, shorts pretos e cabelos pretos penteados para trás. A mulher usa regata igual, shorts pretos e cabelos loiros longos. O planeta é metálico, com continentes prateados e oceanos dourados, e uma faixa azul com “ACCESSIBILITY FITNESS”.
+      </figcaption>
+    </figure>
+
+    <h2>Acessibilidade: Nosso Compromisso</h2>
+    <p>
+      O <strong>Accessibility Fitness</strong> foi criado para pessoas com deficiência visual, com foco total na inclusão digital, autonomia e respeito. Aqui, navegar, aprender e explorar o universo da atividade física é uma experiência prazerosa, segura e totalmente acessível. 
+      Nosso site oferece conteúdo 100% informativo sobre <strong>tipos de treinos, suplementos, artes marciais, danças e anabolizantes</strong>, explicando o que são, para que servem, possíveis benefícios físicos e mentais, riscos à saúde e adaptações para todos os tipos de deficiência. 
+    </p>
+
+    <h2>Quando a Inclusão Enxerga o Invisível</h2>
+    <p>
+      <strong>Acessibilidade não é favor, é direito!</strong> Academias e profissionais devem abrir espaço para todos, oferecendo oportunidades adaptadas, acompanhamento especializado e ferramentas que realmente façam a diferença. 
+      No <strong>Accessibility Fitness</strong>, nosso compromisso vai além de quebrar barreiras: queremos abrir caminhos, inspirar mudanças e tornar a inclusão uma realidade concreta. Cada conteúdo e cada vídeo é um passo para um mundo mais justo, acessível e poderoso.
+    </p>
+
+    <h2>Experiências Inspiradoras</h2>
+    <p>
+      Escolha um vídeo abaixo para ver a descrição e assistir à experiência do praticante:
+    </p>
+
+    <label for="videoSelect">Selecione um vídeo:</label>
+    <select id="videoSelect" onchange="showVideoDescriptionAndVideo()">
+      <option value="">-- Escolha um vídeo --</option>
+      <option value="video1">Treino Adaptado de Musculação</option>
+      <option value="video2">Aula de Dança Inclusiva</option>
+      <option value="video3">Artes Marciais Adaptadas</option>
+    </select>
+
+    <div id="videoDescription" style="margin-top: 10px; font-weight: bold;"></div>
+
+    <video id="videoPlayer" controls autoplay style="display: none;">
+      <source id="videoSource" src="" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <h2>Navegação</h2>
+    <a href="treino.html">Ir para Treinos</a>
+    <a href="suplementos.html">Ir para Suplementos</a>
+    <a href="lutas.html">Ir para Lutas</a>
+    <a href="danca.html">Ir para Dança</a>
+    <a href="anabolizantes.html">Ir para Anabolizantes</a>
+    <a href="contato.html">Ir para Contato</a>
+
+    <p class="texto-tts">
+      Aqui você encontra guias de exercícios acessíveis, pensados para pessoas com deficiência visual e todos os usuários que desejam treinar com conforto.
+    </p>
+    <p class="texto-tts">
+      Use os botões da barra para aumentar ou diminuir o tamanho da fonte, ativar o contraste e ouvir o conteúdo da página.
+    </p>
+  </div>
+
+  <footer>
+    <img src="IMG/imagem_topo_pagina.png" alt="Imagem ">
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Ajuste de fonte
+    function aumentarFonte() {
+      const tamanho = window.getComputedStyle(document.body).fontSize;
+      document.body.style.fontSize = (parseFloat(tamanho) * 1.1) + 'px';
+    }
+
+    function diminuirFonte() {
+      const tamanho = window.getComputedStyle(document.body).fontSize;
+      document.body.style.fontSize = (parseFloat(tamanho) / 1.1) + 'px';
+    }
+
+    // Modo alto contraste
+    function modoAltoContraste() {
+      const body = document.body;
+      if(body.style.backgroundColor === "black") {
+        body.style.backgroundColor = "#001f3f";
+        body.style.color = "#ffffff";
+      } else {
+        body.style.backgroundColor = "black";
+        body.style.color = "yellow";
+      }
+    }
+
+    // TTS para ler toda a página (somente conteúdo principal)
+    function lerTexto() {
+      window.speechSynthesis.cancel(); // para fala anterior
+      const container = document.querySelector('.container'); // pega só o conteúdo principal
+      const mensagem = container.innerText;
+      const fala = new SpeechSynthesisUtterance(mensagem);
+      fala.lang = 'pt-BR';
+      window.speechSynthesis.speak(fala);
+    }
+
+    // Vídeos interativos
+    const videos = {
+      video1: {
+        description: "Vídeo mostrando como um treino de musculação pode ser adaptado para pessoas com deficiência visual, destacando segurança, técnicas e acompanhamento.",
+        src: "VIDEOS/video1.mp4" // substitua pelo caminho do seu vídeo real
+      },
+      video2: {
+        description: "Vídeo de uma aula de dança inclusiva, mostrando movimentos adaptados, benefícios físicos e motivação para os praticantes.",
+        src: "videos/video2.mp4"
+      },
+      video3: {
+        description: "Vídeo de artes marciais adaptadas, explicando técnicas seguras, benefícios mentais e físicos e como a inclusão é aplicada.",
+        src: "videos/video3.mp4"
+      }
+    };
+
+    function showVideoDescriptionAndVideo() {
+      const select = document.getElementById("videoSelect");
+      const descriptionDiv = document.getElementById("videoDescription");
+      const videoPlayer = document.getElementById("videoPlayer");
+      const videoSource = document.getElementById("videoSource");
+      const value = select.value;
+
+      if (value && videos[value]) {
+        descriptionDiv.textContent = videos[value].description;
+        videoSource.src = videos[value].src;
+        videoPlayer.load();
+        videoPlayer.style.display = "block";
+      } else {
+        descriptionDiv.textContent = "";
+        videoPlayer.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

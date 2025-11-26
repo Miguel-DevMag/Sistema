@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f8ff, #d1e8ff);
+    color: #333;
+}
+
+header {
+    background-image: url(login-background.png'); /* Troque pelo nome da sua imagem */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    border-bottom: 4px solid #0056b3;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #0056b3;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+}

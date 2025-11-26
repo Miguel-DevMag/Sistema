@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessibility Fitness - Guia de Exercícios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #001f3f;
+      color: #fff;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    label, select {
+      font-size: 18px;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .exercicios-grupo {
+      display: none; /* todos ocultos inicialmente */
+      margin-top: 20px;
+    }
+    .exercicios-grupo.ativo {
+      display: block; /* exibe só o grupo selecionado */
+    }
+    h1 {
+      color: #ffcc00;
+    }
+    h2 {
+      color: #ffcc00;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
+    }
+    h3 {
+      color: #ffffff;
+      margin-top: 15px;
+    }
+    p {
+      margin: 5px 0 10px 0;
+    }
+    strong {
+      color: #ffcc00;
+    }
+    .frase-topo {
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #ffea70;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accessibility Fitness - Guia de Exercícios</h1>
+
+  <label for="grupoMuscular">Escolha o grupo muscular:</label>
+  <select id="grupoMuscular" onchange="mostrarExercicios()" aria-label="Escolha um grupo muscular">
+    <option value="">-- Selecione --</option>
+    <option value="abdomen">Abdômen</option>
+    <option value="biceps">Bíceps</option>
+    <option value="cardio">Cardio</option>
+    <option value="costas">Costas</option>
+    <option value="gluteos">Glúteos</option>
+    <option value="ombros">Ombros</option>
+    <option value="panturrilhas">Panturrilhas</option>
+    <option value="peito">Peito</option>
+    <option value="pernas">Pernas</option>
+    <option value="triceps">Tríceps</option>
+  </select>
+
+  <div id="exercicios-container" aria-live="polite">
+
+    <section id="abdomen" class="exercicios-grupo" aria-label="Exercícios para Abdômen">
+      <h2>Exercícios para Abdômen</h2>
+      <p class="frase-topo">
+        🐟 Dory (a personal trainer do site) diz: "Vamos lá, turma do mar! Abdômen forte é como achar um cardume — difícil, mas quando acha, é uma festa! Nemo, tente não se perder enquanto faz a prancha. Marlin, não vale fugir, bora fortalecer esse core! E vocês, peixinhos, preparem os músculos para suar que é hora de nadar contra a preguiça!"
+      </p>
+
+      <article>
+        <h3>Prancha</h3>
+        <p><strong>Descrição:</strong> Manter o corpo reto apoiado nos antebraços e pontas dos pés, contraindo o abdômen.</p>
+        <p><strong>Para que serve:</strong> Fortalecer toda a musculatura do core, melhorando estabilidade e postura.</p>
+      </article>
+      <article>
+        <h3>Abdominal Crunch</h3>
+        <p><strong>Descrição:</strong> Deitado de costas, elevar o tronco em direção aos joelhos sem levantar completamente.</p>
+        <p><strong>Para que serve:</strong> Trabalhar a musculatura abdominal superior.</p>
+      </article>
+      <article>
+        <h3>Elevação de Pernas</h3>
+        <p><strong>Descrição:</strong> Deitado de costas, levantar as pernas esticadas até formar um ângulo de 90° com o tronco.</p>
+        <p><strong>Para que serve:</strong> Fortalecer a musculatura abdominal inferior.</p>
+      </article>
+      <article>
+        <h3>Abdominal Bicicleta</h3>
+        <p><strong>Descrição:</strong> Deitado de costas, simular o movimento de pedalar no ar, alternando cotovelo e joelho opostos.</p>
+        <p><strong>Para que serve:</strong> Trabalhar o abdômen oblíquo e melhorar a coordenação motora.</p>
+      </article>
+      <article>
+        <h3>Abdominal na Bola Suíça</h3>
+        <p><strong>Descrição:</strong> Sentar na bola suíça, realizar a flexão do tronco contra a bola para fortalecer o abdômen.</p>
+        <p><strong>Para que serve:</strong> Fortalecer o core com maior amplitude de movimento e equilíbrio.</p>
+      </article>
+
+      <h2>Alongamentos para Abdômen</h2>
+      <article>
+        <h3>Alongamento do Gato (Cat Stretch)</h3>
+        <p><strong>Descrição:</strong> Em posição de quatro apoios, arqueie as costas para cima e depois para baixo, alongando o abdômen e coluna.</p>
+        <p><strong>Para que serve:</strong> Alongar a musculatura do abdômen e aliviar tensão na coluna.</p>
+      </article>
+      <article>
+        <h3>Alongamento de Cobra</h3>
+        <p><strong>Descrição:</strong> Deitado de barriga para baixo, empurre o tronco para cima com as mãos, esticando o abdômen.</p>
+        <p><strong>Para que serve:</strong> Alongar a parte frontal do tronco e fortalecer a lombar.</p>
+      </article>
+      <article>
+        <h3>Alongamento Lateral em Pé</h3>
+        <p><strong>Descrição:</strong> Em pé, com os braços esticados para cima, incline o tronco lateralmente para alongar os oblíquos.</p>
+        <p><strong>Para que serve:</strong> Melhorar a flexibilidade lateral do tronco e relaxar os músculos abdominais.</p>
+      </article>
+    </section>
+
+    <section id="biceps" class="exercicios-grupo" aria-label="Exercícios para Bíceps">
+      <h2>Exercícios para Bíceps</h2>
+      <p class="frase-topo">
+        🐟 Dory diz: "Vamos malhar esses bíceps, pessoal! É tipo tentar pegar uma bolha no oceano: parece difícil, mas com persistência a gente chega lá! Nemo, cuidado pra não puxar o Marlin pro fundo! Marlin, tenta não se esconder, vem mostrar esses braços fortes! Gil, dá uma pausa nos peixinhos e bora fortalecer esses músculos pra nadar melhor!"
+      </p>
+
+      <article>
+        <h3>Rosca Direta com Barra</h3>
+        <p><strong>Descrição:</strong> Segure a barra com as mãos na largura dos ombros e flexione os cotovelos, levantando a barra até a altura dos ombros.</p>
+        <p><strong>Para que serve:</strong> Fortalecer os músculos do bíceps braquial.</p>
+      </article>
+      <article>
+        <h3>Rosca Alternada com Halteres</h3>
+        <p><strong>Descrição:</strong> Segurando um halter em cada mão, flexione alternadamente os cotovelos para levantar os pesos.</p>
+        <p><strong>Para que serve:</strong> Trabalhar o bíceps de forma unilateral, melhorando o equilíbrio muscular.</p>
+      </article>
+      <article>
+        <h3>Rosca Martelo</h3>
+        <p><strong>Descrição:</strong> Segure os halteres com as palmas voltadas para dentro e flexione os cotovelos mantendo essa posição.</p>
+        <p><strong>Para que serve:</strong> Fortalecer o braquial e o braquiorradial, músculos auxiliares do bíceps.</p>
+      </article>
+      <article>
+        <h3>Rosca Concentrada</h3>
+        <p><strong>Descrição:</strong> Sentado, apoie o cotovelo na parte interna da coxa e faça a flexão do braço com um halter.</p>
+        <p><strong>Para que serve:</strong> Isolar o bíceps para um treino mais focado.</p>
+      </article>
+      <article>
+        <h3>Rosca Scott</h3>
+        <p><strong>Descrição:</strong> Utilize um banco Scott para apoiar os braços e realizar a flexão com barra ou halteres.</p>
+        <p><strong>Para que serve:</strong> Concentrar a força nos bíceps, evitando compensações.</p>
+      </article>
+
+      <h2>Alongamentos para Bíceps</h2>
+      <article>
+        <h3>Alongamento de Bíceps na Parede</h3>
+        <p><strong>Descrição:</strong> Com o braço estendido na parede e palma apoiada, gire o corpo para o lado oposto para alongar o bíceps.</p>
+        <p><strong>Para que serve:</strong> Alongar os músculos do bíceps e melhorar a flexibilidade dos ombros.</p>
+      </article>
+      <article>
+        <h3>Alongamento de Bíceps com Braço Estendido</h3>
+        <p><strong>Descrição:</strong> Estenda o braço atrás do corpo e segure com a outra mão, puxando suavemente para alongar.</p>
+        <p><strong>Para que serve:</strong> Relaxar e alongar o bíceps e antebraço.</p>
+      </article>
+    </section>
+    <section id="cardio" class="exercicios-grupo" aria-label="Exercícios para Cardio">
+      <h2>Exercícios para Cardio</h2>
+      <p class="frase-topo">
+        🐟 Dory diz: "Vamos nadar, nadar... opa! Espera, por que tá todo mundo suando? 🤔"<br />
+        🐠 Marlin: "Porque isso é <em>cardio</em>, Dory. Não é só nadar feliz... é nadar <strong>rápido</strong>!"<br />
+        🐋 Destiny: "Corre, queimar calorias é meu novo superpoder!"<br />
+        🐙 Hank: "Aff... odeio correr. Posso só fingir que fui?"
+      </p>
+
+      <article>
+        <h3>Esteira (caminhada ou corrida)</h3>
+        <p><strong>Descrição:</strong> Caminhada leve, moderada ou corrida em ritmo contínuo.</p>
+        <p><strong>Para que serve:</strong> Melhora o condicionamento cardiovascular, auxilia no emagrecimento e fortalece o sistema cardiorrespiratório.</p>
+      </article>
+
+      <article>
+        <h3>Bicicleta Ergométrica</h3>
+        <p><strong>Descrição:</strong> Exercício sentado, pedalando com resistência ajustável.</p>
+        <p><strong>Para que serve:</strong> Trabalha coxas e glúteos, além de melhorar o fôlego e queimar calorias.</p>
+      </article>
+
+      <article>
+        <h3>Elíptico (Transport)</h3>
+        <p><strong>Descrição:</strong> Movimento combinado de braços e pernas em aparelho com pegada suave.</p>
+        <p><strong>Para que serve:</strong> Baixo impacto para as articulações, ótimo para queimar calorias e melhorar a resistência.</p>
+      </article>
+
+      <article>
+        <h3>Subir Escadas (Step)</h3>
+        <p><strong>Descrição:</strong> Subir e descer degraus ou usar aparelho simulador.</p>
+        <p><strong>Para que serve:</strong> Trabalha pernas e glúteos, aumenta a frequência cardíaca e a força muscular.</p>
+      </article>
+
+      <article>
+        <h3>Corda Naval (Batalha de Corda)</h3>
+        <p><strong>Descrição:</strong> Movimento alternado ou simultâneo das cordas em alta intensidade.</p>
+        <p><strong>Para que serve:</strong> Aumenta a frequência cardíaca, melhora a força e queima gordura.</p>
+      </article>
+
+      <article>
+        <h3>Pular Corda</h3>
+        <p><strong>Descrição:</strong> Saltos rápidos com corda, variando ritmo e estilo.</p>
+        <p><strong>Para que serve:</strong> Excelente para emagrecimento, coordenação e resistência cardiovascular.</p>
+      </article>
+
+      <article>
+        <h3>Polichinelo</h3>
+        <p><strong>Descrição:</strong> Abertura e fechamento de pernas e braços com saltos ritmados.</p>
+        <p><strong>Para que serve:</strong> Ativa o corpo inteiro e eleva rapidamente os batimentos cardíacos.</p>
+      </article>
+
+      <article>
+        <h3>Corrida Estacionária</h3>
+        <p><strong>Descrição:</strong> Simular corrida sem sair do lugar, elevando os joelhos.</p>
+        <p><strong>Para que serve:</strong> Trabalha pernas, fôlego e queima calorias sem necessidade de aparelho.</p>
+      </article>
+
+      <article>
+        <h3>Burpees</h3>
+        <p><strong>Descrição:</strong> Agachamento, salto e flexão num único movimento repetido.</p>
+        <p><strong>Para que serve:</strong> Ativação intensa do corpo todo, ideal para resistência e emagrecimento.</p>
+      </article>
+
+      <article>
+        <h3>Mountain Climber (Escalada no Solo)</h3>
+        <p><strong>Descrição:</strong> Posição de prancha com movimento alternado dos joelhos em direção ao peito.</p>
+        <p><strong>Para que serve:</strong> Queima calórica alta e fortalecimento do core.</p>
+      </article>
+
+      <article>
+        <h3>Jump (Trampolim)</h3>
+        <p><strong>Descrição:</strong> Exercícios de saltos ritmados em mini cama elástica.</p>
+        <p><strong>Para que serve:</strong> Melhora o equilíbrio, condicionamento e queima muitas calorias.</p>
+      </article>
+
+      <article>
+        <h3>Zumba ou Dança Aeróbica</h3>
+        <p><strong>Descrição:</strong> Aulas com movimentos coreografados ao ritmo da música.</p>
+        <p><strong>Para que serve:</strong> Queima calórica divertida, melhora o humor e o sistema cardiovascular.</p>
+      </article>
+    </section>
+<section id="costas" class="exercicios-grupo" aria-label="Exercícios para Costas">
+  <h2>Exercícios para Costas</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Vamos fortalecer essas nadadeiras traseiras! Costas fortes são como correntes marítimas poderosas – seguras e cheias de energia! Nemo, cuidado para não se enrolar, Marlin, nada firme que a gente vai longe! Gil, dá uma pausa na perseguição e foca no treino!"
+  </p>
+
+  <article>
+    <h3>Puxada na Barra Fixa (Pull-up)</h3>
+    <p><strong>Descrição:</strong> Suspenso numa barra fixa, puxar o corpo para cima até o queixo ultrapassar a barra.</p>
+    <p><strong>Para que serve:</strong> Trabalha dorsais, trapézio, bíceps e melhora a força da parte superior das costas.</p>
+  </article>
+
+  <article>
+    <h3>Remada Curvada com Barra</h3>
+    <p><strong>Descrição:</strong> Com barra nas mãos, inclinar o tronco à frente e puxar a barra em direção ao abdômen.</p>
+    <p><strong>Para que serve:</strong> Fortalece os músculos dorsais, trapézio e romboides.</p>
+  </article>
+
+  <article>
+    <h3>Remada Unilateral com Halter</h3>
+    <p><strong>Descrição:</strong> Apoiado com um joelho e uma mão em banco, puxar o halter em direção ao tronco.</p>
+    <p><strong>Para que serve:</strong> Trabalha dorsais e romboides, além de melhorar equilíbrio muscular.</p>
+  </article>
+
+  <article>
+    <h3>Remada Baixa no Cabo</h3>
+    <p><strong>Descrição:</strong> Sentado, puxar a barra ou pegada em direção ao abdômen, mantendo tronco firme.</p>
+    <p><strong>Para que serve:</strong> Desenvolve os dorsais e músculos da região média das costas.</p>
+  </article>
+
+  <article>
+    <h3>Puxada na Máquina (Pulldown)</h3>
+    <p><strong>Descrição:</strong> Sentado, puxar a barra da máquina na direção do peito.</p>
+    <p><strong>Para que serve:</strong> Foco nos dorsais, especialmente para iniciantes que não conseguem barra fixa.</p>
+  </article>
+
+  <article>
+    <h3>Levantamento Terra (Deadlift)</h3>
+    <p><strong>Descrição:</strong> Puxar a barra do chão até a posição ereta, mantendo a coluna alinhada.</p>
+    <p><strong>Para que serve:</strong> Trabalha toda a cadeia posterior, incluindo lombar, glúteos e dorsais.</p>
+  </article>
+
+  <article>
+    <h3>Superman</h3>
+    <p><strong>Descrição:</strong> Deitado de barriga para baixo, levantar braços e pernas simultaneamente.</p>
+    <p><strong>Para que serve:</strong> Fortalecer a lombar e músculos profundos das costas.</p>
+  </article>
+
+  <article>
+    <h3>Pullover com Halter ou Barra</h3>
+    <p><strong>Descrição:</strong> Deitado em banco, segurar halter/barra e mover para trás da cabeça com braços esticados.</p>
+    <p><strong>Para que serve:</strong> Trabalha dorsais e expansores do tórax.</p>
+  </article>
+
+  <article>
+    <h3>Face Pull (Puxada para Face)</h3>
+    <p><strong>Descrição:</strong> No cabo com corda, puxar para a direção do rosto, com cotovelos altos.</p>
+    <p><strong>Para que serve:</strong> Fortalece trapézio e romboides, melhora postura.</p>
+  </article>
+
+  <article>
+    <h3>Remada Invertida (Body Row)</h3>
+    <p><strong>Descrição:</strong> Deitado sob barra fixa baixa, puxar o corpo em direção à barra.</p>
+    <p><strong>Para que serve:</strong> Trabalha dorsais e bíceps com peso do corpo.</p>
+  </article>
+
+  <h2>Alongamentos para Costas</h2>
+
+  <article>
+    <h3>Alongamento do Gato/Vaca (Cat-Cow)</h3>
+    <p><strong>Descrição:</strong> Em quatro apoios, alternar entre arquear e curvar as costas.</p>
+    <p><strong>Para que serve:</strong> Alivia tensão e melhora mobilidade da coluna.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento de Cobra (Cobra Stretch)</h3>
+    <p><strong>Descrição:</strong> De bruços, empurrar o tronco para cima com as mãos, alongando a coluna.</p>
+    <p><strong>Para que serve:</strong> Alongar músculos abdominais e região lombar.</p>
+  </article>
+
+  <article>
+    <h3>Torção da Coluna Sentada</h3>
+    <p><strong>Descrição:</strong> Sentado, girar o tronco para um lado com o cotovelo oposto apoiado no joelho.</p>
+    <p><strong>Para que serve:</strong> Alonga músculos laterais e melhora flexibilidade da coluna.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento do Latíssimo em Pé</h3>
+    <p><strong>Descrição:</strong> Braço estendido para cima e inclinar o tronco lateralmente para alongar o latíssimo do dorso.</p>
+    <p><strong>Para que serve:</strong> Aumenta a flexibilidade lateral das costas.</p>
+  </article>
+</section>
+
+<section id="gluteos" class="exercicios-grupo" aria-label="Exercícios para Glúteos">
+  <h2>Exercícios para Glúteos</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Vamos ativar esses glúteos, pessoal! Glúteos fortes são como nadadeiras potentes – essenciais pra nadar longe! Nemo, cuidado para não ficar só olhando! Marlin, vamos com força, que o treino é pra valer! E Gil, bora parar de fugir e trabalhar esse bumbum!"
+  </p>
+
+  <article>
+    <h3>Agachamento Livre (Squat)</h3>
+    <p><strong>Descrição:</strong> Flexionar os joelhos e quadril como se fosse sentar, mantendo o tronco ereto.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos máximos, quadríceps e posteriores.</p>
+  </article>
+
+  <article>
+    <h3>Avanço (Lunge)</h3>
+    <p><strong>Descrição:</strong> Dar um passo à frente e flexionar ambos os joelhos até quase encostar o joelho de trás no chão.</p>
+    <p><strong>Para que serve:</strong> Fortalece glúteos, quadríceps e melhora equilíbrio.</p>
+  </article>
+
+  <article>
+    <h3>Levantamento Terra Romeno</h3>
+    <p><strong>Descrição:</strong> Com barra ou halteres, manter pernas semi-estendidas, baixar o tronco e levantar com glúteos e posteriores.</p>
+    <p><strong>Para que serve:</strong> Foco nos glúteos e posteriores de coxa.</p>
+  </article>
+
+  <article>
+    <h3>Hip Thrust (Elevação de Quadril)</h3>
+    <p><strong>Descrição:</strong> Apoiado com as costas num banco, elevar o quadril contra a resistência (barra, peso).</p>
+    <p><strong>Para que serve:</strong> Fortalecer glúteos máximos com ênfase máxima.</p>
+  </article>
+
+  <article>
+    <h3>Glute Bridge (Ponte de Glúteos)</h3>
+    <p><strong>Descrição:</strong> Deitado, elevar o quadril contra o chão, contraindo glúteos.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos e cadeia posterior.</p>
+  </article>
+
+  <article>
+    <h3>Abdução de Quadril na Máquina</h3>
+    <p><strong>Descrição:</strong> Sentado numa máquina, abrir as pernas contra a resistência.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos médio e abdutores.</p>
+  </article>
+
+  <article>
+    <h3>Abdução de Quadril com Faixa Elástica</h3>
+    <p><strong>Descrição:</strong> Com faixa elástica nos joelhos ou tornozelos, abrir as pernas contra a resistência.</p>
+    <p><strong>Para que serve:</strong> Fortalece glúteos médio e abdutores.</p>
+  </article>
+
+  <article>
+    <h3>Cadeira Abdutora</h3>
+    <p><strong>Descrição:</strong> Sentado, empurrar as pernas para fora contra a resistência da máquina.</p>
+    <p><strong>Para que serve:</strong> Trabalha abdutores do quadril.</p>
+  </article>
+
+  <article>
+    <h3>Adutor na Máquina</h3>
+    <p><strong>Descrição:</strong> Sentado, aproximar as pernas contra resistência.</p>
+    <p><strong>Para que serve:</strong> Trabalha músculos adutores (parte interna da coxa).</p>
+  </article>
+
+  <article>
+    <h3>Step-up</h3>
+    <p><strong>Descrição:</strong> Subir um degrau com uma perna, impulsionando o quadril para cima.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos, quadríceps e melhora equilíbrio.</p>
+  </article>
+
+  <article>
+    <h3>Kickback no Cabo (Elevação Posterior de Quadril)</h3>
+    <p><strong>Descrição:</strong> No cabo, estender a perna para trás contra resistência.</p>
+    <p><strong>Para que serve:</strong> Fortalece glúteo máximo.</p>
+  </article>
+
+  <article>
+    <h3>Kickback com Faixa Elástica</h3>
+    <p><strong>Descrição:</strong> Em quatro apoios, estender a perna para trás contra resistência da faixa.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteo máximo.</p>
+  </article>
+
+  <article>
+    <h3>Deadlift Sumô</h3>
+    <p><strong>Descrição:</strong> Levantamento terra com as pernas mais afastadas, focando glúteos e adutores.</p>
+    <p><strong>Para que serve:</strong> Fortalece glúteos, adutores e posteriores.</p>
+  </article>
+
+  <article>
+    <h3>Stiff (Levantamento Romeno com Pernas Rígidas)</h3>
+    <p><strong>Descrição:</strong> Sem flexionar muito os joelhos, inclinar o tronco para frente com barra ou halteres.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos e posteriores de coxa.</p>
+  </article>
+
+  <article>
+    <h3>Clamshell (Concha)</h3>
+    <p><strong>Descrição:</strong> Deitado de lado, com joelhos dobrados, abrir o joelho superior contra resistência.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteo médio e estabilizadores do quadril.</p>
+  </article>
+
+  <article>
+    <h3>Pistol Squat (Agachamento Unilateral)</h3>
+    <p><strong>Descrição:</strong> Agachar numa perna só, mantendo a outra estendida para frente.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos, quadríceps, equilíbrio e força.</p>
+  </article>
+
+  <article>
+    <h3>Walking Lunges (Avanço Caminhando)</h3>
+    <p><strong>Descrição:</strong> Avanços alternados em sequência andando.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos, pernas e coordenação.</p>
+  </article>
+
+  <h2>Alongamentos para Glúteos</h2>
+
+  <article>
+    <h3>Alongamento do Piriforme</h3>
+    <p><strong>Descrição:</strong> Sentado, cruzar uma perna sobre a outra e puxar o joelho em direção ao peito.</p>
+    <p><strong>Para que serve:</strong> Alonga glúteos e alivia tensão na região.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento de Glúteos Deitado</h3>
+    <p><strong>Descrição:</strong> Deitado, puxar um joelho em direção ao peito, mantendo a outra perna esticada.</p>
+    <p><strong>Para que serve:</strong> Relaxa e alonga a musculatura dos glúteos.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento da Borboleta</h3>
+    <p><strong>Descrição:</strong> Sentado, juntar as plantas dos pés e pressionar os joelhos em direção ao chão.</p>
+    <p><strong>Para que serve:</strong> Alongar parte interna das coxas e glúteos.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento do Flexor do Quadril</h3>
+    <p><strong>Descrição:</strong> Em posição de lunge, esticar a perna de trás e empurrar o quadril para frente.</p>
+    <p><strong>Para que serve:</strong> Alongar flexores do quadril, que influenciam na postura dos glúteos.</p>
+  </article>
+</section>
+
+<section id="ombros" class="exercicios-grupo" aria-label="Exercícios para Ombros">
+  <h2>Exercícios para Ombros</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Vamos levantar esses ombros, galera! Ombros fortes são como nadadeiras que impulsionam a natação — essenciais pra dar aquele impulso! Nemo, nada de enrolar! Marlin, bora focar e dar aquele desenvolvimento! E Gil, chega de enrolação, é hora do treino!"
+  </p>
+
+  <article>
+    <h3>Desenvolvimento com Halteres ou Barra (Shoulder Press)</h3>
+    <p><strong>Descrição:</strong> Empurrar halteres ou barra para cima, partindo da altura dos ombros.</p>
+    <p><strong>Para que serve:</strong> Trabalha toda a musculatura do ombro, especialmente a parte anterior e lateral.</p>
+  </article>
+
+  <article>
+    <h3>Elevação Lateral</h3>
+    <p><strong>Descrição:</strong> Levantar halteres lateralmente até a altura dos ombros, mantendo os braços retos.</p>
+    <p><strong>Para que serve:</strong> Fortalece o deltóide lateral para largura dos ombros.</p>
+  </article>
+
+  <article>
+    <h3>Elevação Frontal</h3>
+    <p><strong>Descrição:</strong> Levantar halteres ou barra à frente até a altura dos ombros.</p>
+    <p><strong>Para que serve:</strong> Foca no deltóide anterior.</p>
+  </article>
+
+  <article>
+    <h3>Remada Alta</h3>
+    <p><strong>Descrição:</strong> Puxar barra ou halteres na direção do queixo, com cotovelos elevados.</p>
+    <p><strong>Para que serve:</strong> Trabalha deltóide lateral e trapézio.</p>
+  </article>
+
+  <article>
+    <h3>Crucifixo Inverso (Reverse Fly)</h3>
+    <p><strong>Descrição:</strong> Inclinar o tronco para frente e abrir os braços com halteres para trás.</p>
+    <p><strong>Para que serve:</strong> Fortalece o deltóide posterior.</p>
+  </article>
+
+  <article>
+    <h3>Elevação Posterior no Peck Deck</h3>
+    <p><strong>Descrição:</strong> Na máquina Peck Deck invertida, abrir os braços para trás.</p>
+    <p><strong>Para que serve:</strong> Isola o deltóide posterior.</p>
+  </article>
+
+  <article>
+    <h3>Face Pull (Puxada para o rosto)</h3>
+    <p><strong>Descrição:</strong> Puxar corda em polia alta em direção ao rosto, cotovelos abertos.</p>
+    <p><strong>Para que serve:</strong> Trabalha deltóide posterior e estabilizadores do ombro.</p>
+  </article>
+
+  <article>
+    <h3>Arnold Press</h3>
+    <p><strong>Descrição:</strong> Desenvolvimento com giro dos halteres, iniciando com palmas para dentro e terminando com palmas para frente.</p>
+    <p><strong>Para que serve:</strong> Ativa todas as partes do deltóide com foco especial no anterior.</p>
+  </article>
+
+  <article>
+    <h3>Encolhimento de Ombros (Shrugs)</h3>
+    <p><strong>Descrição:</strong> Levantar os ombros para cima com halteres ou barra.</p>
+    <p><strong>Para que serve:</strong> Foca no trapézio superior.</p>
+  </article>
+
+  <article>
+    <h3>Elevação Lateral com Faixa Elástica</h3>
+    <p><strong>Descrição:</strong> Levantar os braços lateralmente contra a resistência da faixa.</p>
+    <p><strong>Para que serve:</strong> Fortalece deltóide lateral com menor impacto.</p>
+  </article>
+
+  <h2>Alongamentos para Ombros</h2>
+
+  <article>
+    <h3>Alongamento de Ombro Cruzado</h3>
+    <p><strong>Descrição:</strong> Estender um braço na frente do corpo e puxar com a outra mão.</p>
+    <p><strong>Para que serve:</strong> Alonga músculos do ombro e melhora a flexibilidade.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento de Ombro com Braço Elevado</h3>
+    <p><strong>Descrição:</strong> Levantar um braço e puxar o cotovelo para trás com a outra mão.</p>
+    <p><strong>Para que serve:</strong> Relaxa e alonga os músculos do ombro e braço.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento de Peitoral com Braço na Parede</h3>
+    <p><strong>Descrição:</strong> Apoiar o braço estendido na parede e girar o corpo para alongar ombro e peitoral.</p>
+    <p><strong>Para que serve:</strong> Alongar e melhorar a mobilidade do ombro e peitoral.</p>
+  </article>
+</section>
+
+<section id="panturrilhas" class="exercicios-grupo" aria-label="Exercícios para Panturrilhas">
+  <h2>Exercícios para Panturrilhas</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Panturrilhas? Isso é tipo... as nadadeiras da perna, né? Então vamos fortalecer essas molas aquáticas! Gil, bora subir nas pontinhas dos pés! Destiny, tenta não escorregar! E Marlin, sem mimimi... sobe e desce, sobe e desce, que nem onda do mar!"
+  </p>
+
+  <article>
+    <h3>Elevação de Panturrilha em Pé</h3>
+    <p><strong>Descrição:</strong> Subir na ponta dos pés e descer lentamente, com ou sem peso.</p>
+    <p><strong>Para que serve:</strong> Trabalha o gastrocnêmio, melhorando força e resistência nas panturrilhas.</p>
+  </article>
+
+  <article>
+    <h3>Elevação de Panturrilha Sentado</h3>
+    <p><strong>Descrição:</strong> Sentado, elevar os calcanhares mantendo os pés apoiados.</p>
+    <p><strong>Para que serve:</strong> Fortalece o sóleo, músculo mais profundo da panturrilha.</p>
+  </article>
+
+  <article>
+    <h3>Elevação de Panturrilha Unilateral</h3>
+    <p><strong>Descrição:</strong> Fazer o movimento com uma perna de cada vez.</p>
+    <p><strong>Para que serve:</strong> Corrige desequilíbrios e ativa a musculatura de forma isolada.</p>
+  </article>
+
+  <article>
+    <h3>Elevação de Panturrilha na Leg Press</h3>
+    <p><strong>Descrição:</strong> Com a ponta dos pés na plataforma, empurrar para frente usando só as panturrilhas.</p>
+    <p><strong>Para que serve:</strong> Trabalha com segurança e sobrecarga controlada.</p>
+  </article>
+
+  <article>
+    <h3>Elevação de Panturrilha na Escada ou Step</h3>
+    <p><strong>Descrição:</strong> Subir na ponta dos pés usando um degrau ou plataforma.</p>
+    <p><strong>Para que serve:</strong> Garante maior amplitude e fortalecimento muscular.</p>
+  </article>
+
+  <article>
+    <h3>Caminhada na Ponta dos Pés</h3>
+    <p><strong>Descrição:</strong> Caminhar usando apenas a ponta dos pés.</p>
+    <p><strong>Para que serve:</strong> Trabalha resistência e força das panturrilhas.</p>
+  </article>
+
+  <article>
+    <h3>Pular Corda</h3>
+    <p><strong>Descrição:</strong> Pulos leves com foco na ativação da ponta dos pés.</p>
+    <p><strong>Para que serve:</strong> Melhora coordenação e resistência muscular.</p>
+  </article>
+
+  <article>
+    <h3>Corrida em Subida</h3>
+    <p><strong>Descrição:</strong> Corrida em aclives ou rampa, ativando panturrilhas com mais intensidade.</p>
+    <p><strong>Para que serve:</strong> Hipertrofia, explosão e condicionamento físico.</p>
+  </article>
+
+  <h2>Alongamentos para Panturrilhas</h2>
+
+  <article>
+    <h3>Alongamento na Parede</h3>
+    <p><strong>Descrição:</strong> Apoie o pé na parede com o calcanhar no chão e incline o corpo pra frente.</p>
+    <p><strong>Para que serve:</strong> Alongar o gastrocnêmio e relaxar a perna.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento com Faixa ou Toalha</h3>
+    <p><strong>Descrição:</strong> Sentado, usar faixa no pé e puxar em direção ao corpo.</p>
+    <p><strong>Para que serve:</strong> Alonga o sóleo e o tendão de Aquiles.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento em Pé com Avanço</h3>
+    <p><strong>Descrição:</strong> Posicionar uma perna à frente e outra atrás, mantendo o calcanhar traseiro no chão.</p>
+    <p><strong>Para que serve:</strong> Alonga panturrilhas e estimula flexibilidade.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento com Degrau</h3>
+    <p><strong>Descrição:</strong> Ficar com metade do pé apoiado em um degrau e deixar o calcanhar descer.</p>
+    <p><strong>Para que serve:</strong> Proporciona um alongamento profundo da panturrilha.</p>
+  </article>
+
+  <article>
+    <h3>Postura do Cão Olhando para Baixo (Yoga)</h3>
+    <p><strong>Descrição:</strong> Corpo em formato de V invertido com os calcanhares indo em direção ao chão.</p>
+    <p><strong>Para que serve:</strong> Alongar panturrilhas, isquiotibiais e lombar.</p>
+  </article>
+</section>
+
+<section id="peito" class="exercicios-grupo" aria-label="Exercícios para Peito">
+  <h2>Exercícios para Peito</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Vamos lá, turma! Trabalhar o peito é como abrir as nadadeiras pra um abraço gigante! Marlin, sem reclamar! Gil, mostra essa força aí! E Destiny, cuidado pra não derrubar ninguém com esses peitorais!" 🐬💥
+  </p>
+
+  <article>
+    <h3>Supino Reto com Barra</h3>
+    <p><strong>Descrição:</strong> Deitado no banco, empurrar a barra para cima e retornar controladamente.</p>
+    <p><strong>Para que serve:</strong> Fortalece o peitoral maior, tríceps e deltoides anteriores.</p>
+  </article>
+
+  <article>
+    <h3>Supino Reto com Halteres</h3>
+    <p><strong>Descrição:</strong> Mesmo movimento do supino com barra, mas usando halteres.</p>
+    <p><strong>Para que serve:</strong> Permite maior amplitude e equilíbrio muscular.</p>
+  </article>
+
+  <article>
+    <h3>Supino Inclinado com Barra</h3>
+    <p><strong>Descrição:</strong> Banco inclinado para cima, empurrar a barra verticalmente.</p>
+    <p><strong>Para que serve:</strong> Trabalha a parte superior do peitoral.</p>
+  </article>
+
+  <article>
+    <h3>Supino Inclinado com Halteres</h3>
+    <p><strong>Descrição:</strong> Igual ao com barra, mas com halteres.</p>
+    <p><strong>Para que serve:</strong> Mais controle e ativação muscular.</p>
+  </article>
+
+  <article>
+    <h3>Supino Declinado com Barra</h3>
+    <p><strong>Descrição:</strong> Banco inclinado para baixo, barra empurrada para cima.</p>
+    <p><strong>Para que serve:</strong> Trabalha o peitoral inferior.</p>
+  </article>
+
+  <article>
+    <h3>Supino Declinado com Halteres</h3>
+    <p><strong>Descrição:</strong> Igual ao com barra, mas usando halteres.</p>
+    <p><strong>Para que serve:</strong> Maior controle e estabilidade.</p>
+  </article>
+
+  <article>
+    <h3>Flexão de Braço no Solo</h3>
+    <p><strong>Descrição:</strong> Apoiado no chão, flexionar e estender os braços.</p>
+    <p><strong>Para que serve:</strong> Exercício clássico que ativa o peitoral, tríceps e ombros.</p>
+  </article>
+
+  <article>
+    <h3>Flexão Inclinada</h3>
+    <p><strong>Descrição:</strong> Mãos apoiadas em superfície mais alta.</p>
+    <p><strong>Para que serve:</strong> Ideal para iniciantes e foca no peito inferior.</p>
+  </article>
+
+  <article>
+    <h3>Flexão Declive</h3>
+    <p><strong>Descrição:</strong> Pés elevados em banco, flexionar os braços.</p>
+    <p><strong>Para que serve:</strong> Enfatiza a parte superior do peito.</p>
+  </article>
+
+  <article>
+    <h3>Flexão Explosiva</h3>
+    <p><strong>Descrição:</strong> Flexão com impulso para tirar as mãos do chão.</p>
+    <p><strong>Para que serve:</strong> Potência, coordenação e ativação do peitoral.</p>
+  </article>
+
+  <article>
+    <h3>Crucifixo com Halteres no Banco Reto</h3>
+    <p><strong>Descrição:</strong> Braços abertos, unir no centro do peito com leve flexão.</p>
+    <p><strong>Para que serve:</strong> Isolamento do peitoral com grande amplitude.</p>
+  </article>
+
+  <article>
+    <h3>Crucifixo Inclinado com Halteres</h3>
+    <p><strong>Descrição:</strong> Banco inclinado, mesmo movimento do crucifixo.</p>
+    <p><strong>Para que serve:</strong> Trabalha a parte superior do peito.</p>
+  </article>
+
+  <article>
+    <h3>Crucifixo Declinado com Halteres</h3>
+    <p><strong>Descrição:</strong> Banco declinado, braços fechando abaixo da linha do peitoral.</p>
+    <p><strong>Para que serve:</strong> Ênfase no peitoral inferior.</p>
+  </article>
+
+  <article>
+    <h3>Crossover com Polia Alta</h3>
+    <p><strong>Descrição:</strong> Cabos altos, braços descem cruzando na frente.</p>
+    <p><strong>Para que serve:</strong> Definição do peitoral médio e superior.</p>
+  </article>
+
+  <article>
+    <h3>Crossover com Polia Baixa</h3>
+    <p><strong>Descrição:</strong> Cabos baixos, movimento ascendente cruzando os braços.</p>
+    <p><strong>Para que serve:</strong> Trabalha o peitoral superior com foco.</p>
+  </article>
+
+  <article>
+    <h3>Peck Deck (Voador)</h3>
+    <p><strong>Descrição:</strong> Máquina com braços articulados para abrir e fechar.</p>
+    <p><strong>Para que serve:</strong> Excelente para iniciantes ou definição do peitoral.</p>
+  </article>
+
+  <article>
+    <h3>Pullover com Halter</h3>
+    <p><strong>Descrição:</strong> Deitado, passar o halter por trás da cabeça e voltar.</p>
+    <p><strong>Para que serve:</strong> Expande a caixa torácica e ativa o peitoral.</p>
+  </article>
+
+  <article>
+    <h3>Chest Press na Máquina</h3>
+    <p><strong>Descrição:</strong> Movimento semelhante ao supino com carga guiada.</p>
+    <p><strong>Para que serve:</strong> Fortalece o peitoral com segurança e estabilidade.</p>
+  </article>
+
+  <article>
+    <h3>Pressão com Bola entre as Mãos</h3>
+    <p><strong>Descrição:</strong> Espremer bola ou almofada entre as palmas com força.</p>
+    <p><strong>Para que serve:</strong> Ativação isométrica do peitoral.</p>
+  </article>
+
+  <article>
+    <h3>Bar Dips (Mergulho em Paralelas)</h3>
+    <p><strong>Descrição:</strong> Apoiado em barras paralelas, flexionar os cotovelos inclinando o tronco.</p>
+    <p><strong>Para que serve:</strong> Trabalha principalmente o peitoral inferior.</p>
+  </article>
+
+  <article>
+    <h3>Flexão em Paralletes</h3>
+    <p><strong>Descrição:</strong> Flexão profunda com as mãos em barras baixas.</p>
+    <p><strong>Para que serve:</strong> Ativação completa do peitoral com maior profundidade.</p>
+  </article>
+
+  <h2>Alongamentos para Peitoral</h2>
+
+  <article>
+    <h3>Alongamento na Parede</h3>
+    <p><strong>Descrição:</strong> Braço estendido na parede, girar o tronco no sentido oposto.</p>
+    <p><strong>Para que serve:</strong> Alongar a musculatura peitoral e melhorar a postura.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento com Mãos Entrelaçadas Atrás</h3>
+    <p><strong>Descrição:</strong> Em pé, segurar as mãos atrás do corpo e levantar.</p>
+    <p><strong>Para que serve:</strong> Abrir o peito e aliviar tensão dos ombros.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento em Canto de Parede</h3>
+    <p><strong>Descrição:</strong> Apoiar os dois braços em um canto e inclinar o corpo à frente.</p>
+    <p><strong>Para que serve:</strong> Alongar profundamente o peitoral.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento com Faixa</h3>
+    <p><strong>Descrição:</strong> Segurar uma faixa ou toalha atrás das costas e puxar.</p>
+    <p><strong>Para que serve:</strong> Promove abertura do peitoral e mobilidade.</p>
+  </article>
+
+  <article>
+    <h3>Alongamento de Peito deitado (torção com braço aberto)</h3>
+    <p><strong>Descrição:</strong> Deitado de barriga, braço aberto e girar o tronco no sentido contrário.</p>
+    <p><strong>Para que serve:</strong> Alongar o peitoral de forma suave e profunda.</p>
+  </article>
+
+  <article>
+    <h3>Postura do Camelo (Yoga)</h3>
+    <p><strong>Descrição:</strong> Em pé de joelhos, inclinar o corpo para trás com as mãos nos calcanhares.</p>
+    <p><strong>Para que serve:</strong> Alongamento profundo do peito e coluna.</p>
+  </article>
+
+  <article>
+    <h3>Postura do Arco (Yoga)</h3>
+    <p><strong>Descrição:</strong> Deitado de barriga para baixo, segurar os tornozelos e levantar o tronco e as pernas.</p>
+    <p><strong>Para que serve:</strong> Alongamento total da frente do corpo, incluindo peitoral.</p>
+  </article>
+</section>
+
+<section id="pernas" class="exercicios-grupo" aria-label="Exercícios para Pernas">
+  <h2>Exercícios para Pernas</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Hora de malhar as nadadeiras traseiras! Vamos lá, Nemo, é tipo nadar contra a corrente!<br>
+    🐠 Marlin: "Dory, isso é agachamento, não nado sincronizado!"<br>
+    🐙 Hank: "Perna? Eu tenho oito... posso pular essa parte?"<br>
+    🐋 Destiny: "Vamos fortalecer essas pernocas! Mesmo que sejam nadadeiras!"
+  </p>
+
+  <!-- Quadríceps -->
+  <article>
+    <h3>Agachamento Livre</h3>
+    <p><strong>Descrição:</strong> Agachar mantendo os pés afastados, coluna reta e descendo até formar um ângulo de 90° nos joelhos.</p>
+    <p><strong>Para que serve:</strong> Fortalece quadríceps, glúteos e core.</p>
+  </article>
+  <article>
+    <h3>Leg Press 45°</h3>
+    <p><strong>Descrição:</strong> Empurrar a plataforma com os pés em um ângulo de 45°, mantendo o controle do movimento.</p>
+    <p><strong>Para que serve:</strong> Trabalha quadríceps, glúteos e posteriores de coxa.</p>
+  </article>
+  <article>
+    <h3>Cadeira Extensora</h3>
+    <p><strong>Descrição:</strong> Estender os joelhos contra resistência sentado em máquina específica.</p>
+    <p><strong>Para que serve:</strong> Fortalece o músculo do quadríceps isoladamente.</p>
+  </article>
+  <article>
+    <h3>Avanço com Halteres</h3>
+    <p><strong>Descrição:</strong> Dar passos largos à frente, flexionando os joelhos com halteres nas mãos.</p>
+    <p><strong>Para que serve:</strong> Trabalha quadríceps, glúteos e equilíbrio.</p>
+  </article>
+  <article>
+    <h3>Step-up</h3>
+    <p><strong>Descrição:</strong> Subir em um banco ou caixa com uma perna de cada vez, segurando halteres.</p>
+    <p><strong>Para que serve:</strong> Fortalece pernas e melhora estabilidade.</p>
+  </article>
+
+  <!-- Posterior de coxa -->
+  <article>
+    <h3>Stiff com Halteres</h3>
+    <p><strong>Descrição:</strong> Flexionar levemente os joelhos e descer o tronco com halteres próximos ao corpo.</p>
+    <p><strong>Para que serve:</strong> Trabalha os posteriores de coxa e glúteos.</p>
+  </article>
+  <article>
+    <h3>Mesa Flexora</h3>
+    <p><strong>Descrição:</strong> Deitado na máquina, flexionar os joelhos puxando o peso.</p>
+    <p><strong>Para que serve:</strong> Fortalece os músculos posteriores da coxa.</p>
+  </article>
+
+  <!-- Abdutores e adutores -->
+  <article>
+    <h3>Máquina Abdutora</h3>
+    <p><strong>Descrição:</strong> Sentado, afastar as pernas contra resistência da máquina.</p>
+    <p><strong>Para que serve:</strong> Trabalha glúteos e músculos laterais da coxa.</p>
+  </article>
+  <article>
+    <h3>Máquina Adutora</h3>
+    <p><strong>Descrição:</strong> Sentado, juntar as pernas contra resistência.</p>
+    <p><strong>Para que serve:</strong> Trabalha a parte interna das coxas (adutores).</p>
+  </article>
+
+  <!-- Funcionais -->
+  <article>
+    <h3>Pistol Squat</h3>
+    <p><strong>Descrição:</strong> Agachamento com uma perna, mantendo a outra esticada à frente.</p>
+    <p><strong>Para que serve:</strong> Trabalha força, equilíbrio e coordenação.</p>
+  </article>
+  <article>
+    <h3>Agachamento com Salto</h3>
+    <p><strong>Descrição:</strong> Após agachar, saltar para cima com impulso e repetir o movimento.</p>
+    <p><strong>Para que serve:</strong> Fortalece as pernas e melhora a potência muscular.</p>
+  </article>
+
+  <h2>Alongamentos para Pernas</h2>
+  <article>
+    <h3>Alongamento de Quadríceps em Pé</h3>
+    <p><strong>Descrição:</strong> Segurar um dos pés atrás do corpo, com o joelho apontando para baixo.</p>
+    <p><strong>Para que serve:</strong> Alongar o quadríceps e melhorar a flexibilidade do joelho.</p>
+  </article>
+  <article>
+    <h3>Alongamento de Posterior com Perna Estendida</h3>
+    <p><strong>Descrição:</strong> Sentar com uma perna esticada e alcançar o pé com as mãos.</p>
+    <p><strong>Para que serve:</strong> Alongar os músculos posteriores da coxa e lombar.</p>
+  </article>
+  <article>
+    <h3>Alongamento Borboleta</h3>
+    <p><strong>Descrição:</strong> Sentado com as solas dos pés juntas e joelhos abertos, empurre levemente os joelhos para baixo.</p>
+    <p><strong>Para que serve:</strong> Alongar adutores e abrir o quadril.</p>
+  </article>
+  <article>
+    <h3>Postura do Guerreiro</h3>
+    <p><strong>Descrição:</strong> Em pé, afastar as pernas, flexionar o joelho da frente e estender os braços.</p>
+    <p><strong>Para que serve:</strong> Alongar pernas e fortalecer os músculos de forma leve.</p>
+  </article>
+</section>
+
+<section id="triceps" class="exercicios-grupo" aria-label="Exercícios para Tríceps">
+  <h2>Exercícios para Tríceps</h2>
+  <p class="frase-topo">
+    🐟 Dory diz: "Vamos dar aquele tchauzinho poderoso, pessoal! Tríceps forte é igual a nadadeira que empurra o barco! Nemo, cuidado pra não bater o braço na água! Marlin, bora mostrar esses braços de peixe bravo! E você, Gil, para de reclamar e vem malhar!"
+  </p>
+
+  <article>
+    <h3>Tríceps Testa (Skull Crusher)</h3>
+    <p><strong>Descrição:</strong> Deitado, flexionar os cotovelos levando a barra ou halteres em direção à testa.</p>
+    <p><strong>Para que serve:</strong> Trabalha a cabeça longa do tríceps para força e definição.</p>
+  </article>
+  <article>
+    <h3>Tríceps Pulley (Corda ou Barra V)</h3>
+    <p><strong>Descrição:</strong> Puxar a corda ou barra na polia alta estendendo os cotovelos para baixo.</p>
+    <p><strong>Para que serve:</strong> Isola o tríceps, especialmente as cabeças laterais e longas.</p>
+  </article>
+  <article>
+    <h3>Mergulho no Banco (Bench Dips)</h3>
+    <p><strong>Descrição:</strong> Apoiar as mãos no banco atrás do corpo e flexionar os cotovelos para baixo e para cima.</p>
+    <p><strong>Para que serve:</strong> Fortalece tríceps, ombros e peitoral.</p>
+  </article>
+  <article>
+    <h3>Supino Fechado</h3>
+    <p><strong>Descrição:</strong> Fazer o supino com as mãos juntas para focar no tríceps.</p>
+    <p><strong>Para que serve:</strong> Fortalece o tríceps e o peitoral interno.</p>
+  </article>
+  <article>
+    <h3>Tríceps Coice (Kickback)</h3>
+    <p><strong>Descrição:</strong> Inclinar o tronco à frente e estender o braço para trás com halteres.</p>
+    <p><strong>Para que serve:</strong> Trabalha a cabeça longa e lateral do tríceps.</p>
+  </article>
+  <article>
+    <h3>Tríceps Francês com Halteres</h3>
+    <p><strong>Descrição:</strong> Sentado ou em pé, estender os braços para cima e flexionar os cotovelos levando o halter atrás da cabeça.</p>
+    <p><strong>Para que serve:</strong> Fortalece a cabeça longa do tríceps.</p>
+  </article>
+  <article>
+    <h3>Tríceps com Halteres Unilateral</h3>
+    <p><strong>Descrição:</strong> Estender um braço de cada vez para trás, isolando o tríceps.</p>
+    <p><strong>Para que serve:</strong> Melhora a simetria e força do tríceps.</p>
+  </article>
+  <article>
+    <h3>Flexão de Braço com Pegada Fechada</h3>
+    <p><strong>Descrição:</strong> Fazer flexões com as mãos próximas uma da outra, focando no tríceps.</p>
+    <p><strong>Para que serve:</strong> Trabalha tríceps, peitoral e ombros.</p>
+  </article>
+  <article>
+    <h3>Tríceps com Faixa Elástica</h3>
+    <p><strong>Descrição:</strong> Estender os braços para baixo puxando a faixa elástica.</p>
+    <p><strong>Para que serve:</strong> Exercício de resistência para o tríceps.</p>
+  </article>
+
+  <h2>Alongamentos para Tríceps</h2>
+  <article>
+    <h3>Alongamento do Tríceps com Braço Dobrado Atrás da Cabeça</h3>
+    <p><strong>Descrição:</strong> Dobrar o braço e levar a mão atrás da cabeça, puxando o cotovelo com a outra mão.</p>
+    <p><strong>Para que serve:</strong> Alongar a musculatura do tríceps.</p>
+  </article>
+  <article>
+    <h3>Alongamento do Tríceps Cruzando o Braço na Frente do Corpo</h3>
+    <p><strong>Descrição:</strong> Estender um braço na frente do corpo e puxar com a outra mão.</p>
+    <p><strong>Para que serve:</strong> Alongar tríceps e ombros.</p>
+  </article>
+  <article>
+    <h3>Alongamento com a Mão no Ombro Oposto</h3>
+    <p><strong>Descrição:</strong> Puxar o cotovelo para o lado oposto com a mão contrária.</p>
+    <p><strong>Para que serve:</strong> Alivia tensão e alonga o tríceps.</p>
+  </article>
+  <article>
+    <h3>Alongamento do Tríceps com Braço Estendido para Cima</h3>
+    <p><strong>Descrição:</strong> Estender o braço para cima e puxar o cotovelo para trás com a outra mão.</p>
+    <p><strong>Para que serve:</strong> Alongar o tríceps e ombros.</p>
+  </article>
+  <article>
+    <h3>Alongamento do Tríceps com Braço Dobrado para Trás</h3>
+    <p><strong>Descrição:</strong> Dobrar o braço para trás apoiando a mão nas costas e puxar suavemente.</p>
+    <p><strong>Para que serve:</strong> Alongar profundamente a musculatura do tríceps.</p>
+  </article>
+</section>
+    <!-- Seções restantes ocultas -->
+    <section id="costas" class="exercicios-grupo" aria-label="Exercícios para Costas"></section>
+    <section id="gluteos" class="exercicios-grupo" aria-label="Exercícios para Glúteos"></section>
+    <section id="ombros" class="exercicios-grupo" aria-label="Exercícios para Ombros"></section>
+    <section id="panturrilhas" class="exercicios-grupo" aria-label="Exercícios para Panturrilhas"></section>
+    <section id="peito" class="exercicios-grupo" aria-label="Exercícios para Peito"></section>
+    <section id="pernas" class="exercicios-grupo" aria-label="Exercícios para Pernas"></section>
+    <section id="triceps" class="exercicios-grupo" aria-label="Exercícios para Tríceps"></section>
+
+  </div>
+
+  <script>
+    function mostrarExercicios() {
+      const grupo = document.getElementById('grupoMuscular').value;
+      const grupos = document.querySelectorAll('.exercicios-grupo');
+      grupos.forEach(secao => {
+        secao.classList.remove('ativo');
+        if (secao.id === grupo) {
+          secao.classList.add('ativo');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

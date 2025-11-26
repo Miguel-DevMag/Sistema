@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vídeos - Accessibility Fitness</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #002244;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .accessibility-bar {
+      background-color: #003366;
+      padding: 10px;
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+      align-items: center;
+    }
+    .accessibility-bar button {
+      background-color: #0055aa;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+    .accessibility-bar button:hover {
+      background-color: #0077dd;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    section.video-block {
+      background-color: #003366;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+    section.video-block h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    section.video-block video {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      outline: none;
+    }
+    section.video-block p.description {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #f0f0f0;
+    }
+    section.video-block a.audio-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #ffcc00;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    section.video-block a.audio-link:hover,
+    section.video-block a.audio-link:focus {
+      color: #ffaa00;
+      outline: none;
+    }
+    .highlight-text {
+      background-color: #001122;
+      border-left: 5px solid #ffcc00;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    body.high-contrast {
+      background-color: black;
+      color: yellow;
+    }
+    body.high-contrast .accessibility-bar {
+      background-color: #222;
+    }
+    body.high-contrast .accessibility-bar button {
+      background-color: #555;
+      color: yellow;
+    }
+    body.high-contrast .accessibility-bar button:hover {
+      background-color: #888;
+    }
+    body.high-contrast section.video-block {
+      background-color: black;
+      border: 2px solid yellow;
+    }
+    body.high-contrast section.video-block a.audio-link {
+      color: yellow;
+    }
+    body.high-contrast section.video-block a.audio-link:hover,
+    body.high-contrast section.video-block a.audio-link:focus {
+      color: #ff0;
+    }
+    body.high-contrast .highlight-text {
+      background-color: black;
+      border-left: 5px solid yellow;
+    }
+  </style>
+</head>
+<body>
+  <nav class="accessibility-bar" aria-label="Barra de acessibilidade">
+    <button id="increase-font" aria-label="Aumentar fonte">A+</button>
+    <button id="decrease-font" aria-label="Diminuir fonte">A-</button>
+    <button id="toggle-contrast" aria-label="Alternar alto contraste">Contraste</button>
+  </nav>
+
+  <main>
+    <h1>Depoimentos que Inspiram. Força que Transforma.</h1>
+    <div class="highlight-text">
+      Em cada som de esforço, em cada passo dado no escuro, há uma história de superação que ecoa mais alto que qualquer grito de guerra. Esta página é um santuário de coragem, onde heróis da vida real — como você — compartilham vitórias, desafios e transformações profundas. 
+      Assim como os heróis da Marvel e da DC, aqui também enfrentamos batalhas diárias. Mas nossa armadura é a vontade, nosso escudo é a persistência, e o superpoder que nos guia é a fé inabalável de que podemos mais.
+    </div>
+
+    <section class="video-block" tabindex="0" aria-label="Depoimento de deficiente visual">
+      <h2>Depoimento: A superação na jornada fitness</h2>
+      <video controls aria-describedby="desc-video1">
+        <source src="caminho-do-video-depoimento1.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <p id="desc-video1" class="description">
+        Um deficiente visual compartilha como o treino acessível mudou sua autoestima, saúde e qualidade de vida. Um relato real, emocionante e transformador.
+      </p>
+      <a href="audio-depoimento1.mp3" class="audio-link">Ouça a descrição em áudio</a>
+    </section>
+
+    <section class="video-block" tabindex="0" aria-label="Depoimento de deficiente visual">
+      <h2>Depoimento: O primeiro passo rumo à liberdade</h2>
+      <video controls aria-describedby="desc-video2">
+        <source src="caminho-do-video-depoimento2.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <p id="desc-video2" class="description">
+        Relato poderoso de alguém que enfrentou o medo, a dúvida e as limitações com coragem. Uma verdadeira inspiração para todos que estão começando.
+      </p>
+      <a href="audio-depoimento2.mp3" class="audio-link">Ouça a descrição em áudio</a>
+    </section>
+
+    <div class="highlight-text">
+      Agora que você ouviu histórias de quem venceu a si mesmo, é hora de sentir o poder da ação. A motivação começa nas palavras, mas é no treino que ela se transforma em conquista. Você verá que a deficiência não limita — ela desafia. E aqui, cada desafio é enfrentado como um verdadeiro herói.
+    </div>
+
+    <section class="video-block" tabindex="0" aria-label="Vídeo de treino do Fabiano">
+      <h2>Treino do Fabiano - Membros superiores em ação</h2>
+      <video controls aria-describedby="desc-video3">
+        <source src="caminho-do-video-fabiano1.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <p id="desc-video3" class="description">
+        Fabiano mostra técnicas adaptadas para fortalecer braços, ombros e costas. Ritmo controlado, postura ajustada e movimentos acessíveis.
+      </p>
+      <a href="audio-fabiano1.mp3" class="audio-link">Ouça a descrição em áudio</a>
+    </section>
+
+    <section class="video-block" tabindex="0" aria-label="Vídeo de treino do Fabiano">
+      <h2>Treino do Fabiano - Resistência e equilíbrio</h2>
+      <video controls aria-describedby="desc-video4">
+        <source src="caminho-do-video-fabiano2.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+      <p id="desc-video4" class="description">
+        Treino focado em resistência física e equilíbrio com equipamentos acessíveis e orientação clara para deficientes visuais.
+      </p>
+      <a href="audio-fabiano2.mp3" class="audio-link">Ouça a descrição em áudio</a>
+    </section>
+
+    <div class="highlight-text">
+      O impossível só existe até alguém provar o contrário. E aqui, a cada treino, a cada depoimento, mostramos que limites foram feitos para ser quebrados. Seja você o próximo a transformar sua história — com força, coragem e acessibilidade. Porque o herói da sua vida... é você.
+    </div>
+  </main>
+
+  <script>
+    const body = document.body;
+    const increaseBtn = document.getElementById('increase-font');
+    const decreaseBtn = document.getElementById('decrease-font');
+    const contrastBtn = document.getElementById('toggle-contrast');
+    let fontSize = 16;
+
+    increaseBtn.addEventListener('click', () => {
+      if (fontSize < 24) {
+        fontSize += 2;
+        body.style.fontSize = fontSize + 'px';
+      }
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+      if (fontSize > 12) {
+        fontSize -= 2;
+        body.style.fontSize = fontSize + 'px';
+      }
+    });
+
+    contrastBtn.addEventListener('click', () => {
+      body.classList.toggle('high-contrast');
+    });
+  </script>
+</body>
+</html>
