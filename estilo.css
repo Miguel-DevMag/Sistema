@@ -1,83 +1,28 @@
+:root {
+  --bg-button: #0078D7;
+  --bg-button-hover: #005a9e;
+  --border: 1px solid #0078d5 ;
+  --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
 
-/* Reset de margem e altura total da página */
-html, body {
-  height: 100%;
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  cursor: url('../img/ponteiro_superman.png'), auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Imagem de fundo em tela cheia */
 body {
-  background-image: url('../img/login-background.png'); /* Troque pelo nome da sua imagem */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgb(255, 255, 255);
+  font-family: "Poppins",sans-serif;
 }
 
-/* Container do formulário */
 .login-container {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  width: 320px;
-  max-width: 90%;
-}
-
-/* Título do formulário */
-.login-container h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: center;
-}
-
-/* Estilo dos rótulos */
-label {
-  display: block;
-  margin-bottom: 6px;
-  color: #444;
-  font-weight: 600;
-}
-
-/* Estilo dos campos de entrada */
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 18px;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  outline-offset: 2px;
-}
-
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #0078D7;
-  outline: none;
-}
-
-/* Botão de login */
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0078D7;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover,
-button:focus {
-  background-color: #005a9e;
-  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: var(--border);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow) ;
 }
